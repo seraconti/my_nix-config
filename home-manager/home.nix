@@ -55,12 +55,28 @@
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
 
-  # Enable home-manager and git
+  # Enable home-manager
   programs.home-manager.enable = true;
-  programs.git.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
+
+# sets git username and email
+programs.git = {
+  enable = true;
+  userName = "enzoconti";
+  userEmail = "enzo.conti@usp.br";
+};
+
+# enables bashrc alterations
+programs.bash = {
+  enable = true;
+  bashrcExtra = "set completion-ignore-case on";
+};
+# creates inputrc and adds a line to ignore case sensitivity on terminal
+home.file.".inputrc".text = ''
+    set completion-ignore-case on
+  '';
 
   # adding a portuguese special caracter
   home.file.".XCompose".text = ''
