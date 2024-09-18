@@ -161,7 +161,7 @@
   wine
   vscode
   git
-  python
+  python3
 ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
