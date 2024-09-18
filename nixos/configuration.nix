@@ -162,6 +162,7 @@
   vscode
   git
   python3
+  python-dbus
 ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
