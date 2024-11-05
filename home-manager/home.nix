@@ -76,9 +76,9 @@ programs.bash = {
 };
 
 # sets environment variables on bashrc
-environment.variables = {
-  JAVA_HOME = "/nix/store/2vwkssqpzykk37r996cafq7x63imf4sp-openjdk-21+35/lib/openjdk"
-}
+# environment.variables = {
+#   JAVA_HOME = ##dynamically looks for java path;
+# }
 
 # creates inputrc and adds a line to ignore case sensitivity on terminal
 home.file.".inputrc".text = ''
