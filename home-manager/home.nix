@@ -53,7 +53,6 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  programs.java.enable = true;
   # home.packages = with pkgs; [ steam ];
 
   # Enable home-manager
@@ -76,9 +75,9 @@ programs.bash = {
 };
 
 # sets environment variables on bashrc
-# environment.variables = {
-#   JAVA_HOME = ##dynamically looks for java path;
-# }
+home.sessionVariables = {
+   JAVA_HOME = "${pkgs.jdk}"; #dynamically looks for java path;
+};
 
 # creates inputrc and adds a line to ignore case sensitivity on terminal
 home.file.".inputrc".text = ''
