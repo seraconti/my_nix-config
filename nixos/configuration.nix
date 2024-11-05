@@ -162,7 +162,8 @@
   vscode
   git
   python3
-  python-dbus
+  jdk
+  spark # apache spark (nsds)
 ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
