@@ -74,10 +74,15 @@ programs.bash = {
   bashrcExtra = "set completion-ignore-case on";
 };
 
-# sets environment variables on bashrc
+# sets session environment variables on bashrc
 home.sessionVariables = {
    JAVA_HOME = "${pkgs.jdk}"; #dynamically looks for java path;
 };
+
+# adds spark to the path
+programs.bash.initExtra = ''
+    export PATH="$HOME/spark/bin:$PATH"
+  '';
 
 # creates inputrc and adds a line to ignore case sensitivity on terminal
 home.file.".inputrc".text = ''
