@@ -53,6 +53,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
+  programs.java.enable = true;
   # home.packages = with pkgs; [ steam ];
 
   # Enable home-manager
@@ -73,6 +74,12 @@ programs.bash = {
   enable = true;
   bashrcExtra = "set completion-ignore-case on";
 };
+
+# sets environment variables on bashrc
+environment.variables = {
+  JAVA_HOME = "/nix/store/2vwkssqpzykk37r996cafq7x63imf4sp-openjdk-21+35/lib/openjdk"
+}
+
 # creates inputrc and adds a line to ignore case sensitivity on terminal
 home.file.".inputrc".text = ''
     set completion-ignore-case on
