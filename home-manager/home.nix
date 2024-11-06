@@ -76,7 +76,7 @@ programs.bash = {
 
 # sets session environment variables on bashrc
 home.sessionVariables = {
-   JAVA_HOME = "${pkgs.jdk}"; #dynamically looks for java path;
+   JAVA_HOME = "${pkgs.jdk17}"; #dynamically looks for java path;
 };
 
 # adds spark to the path
