@@ -162,8 +162,10 @@
   vscode
   git
   python3
-  jdk
+  jdk17 # spark supports jdk until 17
   spark # apache spark (nsds)
+  jetbrains.idea-community-src # intellij ide
+  maven # maven build automation tool for java
 ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
