@@ -162,8 +162,7 @@
   vscode
   git
   python3
-  jdk11 # spark supports jdk until 11
-  spark # apache spark (nsds)
+  jdk
   jetbrains.idea-ultimate # intellij ide
   maven # maven build automation tool for java
   docker_27
