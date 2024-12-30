@@ -163,9 +163,11 @@
   git
   python3
   jdk
+  jdk8
   jetbrains.idea-ultimate # intellij ide
   maven # maven build automation tool for java
   docker_27
+  drawio
 ];
 
   # docker
