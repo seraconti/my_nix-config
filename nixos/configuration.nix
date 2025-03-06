@@ -106,7 +106,7 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = ["wheel" "docker"];
+      extraGroups = ["wheel" "docker" "vboxusers"];
     };
   };
 
@@ -167,11 +167,19 @@
   jetbrains.idea-ultimate # intellij ide
   maven # maven build automation tool for java
   docker_27
-  virtualbox
 ];
 
   # docker
   virtualisation.docker.enable = true;
+
+  # virtualbox
+   virtualisation.virtualbox.host.enable = true;
+   users.extraGroups.vboxusers.members = [ "cenora" ];
+   services.udev.extraRules = ''
+  KERNEL=="vboxdrv", GROUP="vboxusers", MODE="0660"
+'';
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
+
 }
