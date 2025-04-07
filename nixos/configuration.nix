@@ -163,6 +163,7 @@
   git
   python3
   jdk
+  openconnect
   maven # maven build automation tool for java
   docker_27
 ];
